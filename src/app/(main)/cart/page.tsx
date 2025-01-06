@@ -46,6 +46,8 @@ const CartPage = () => {
 
   const handleCheckout = () => {
     if (currentUser) {
+      console.log(cart?.id);
+
       createPaymentSession({
         cartTotal: parseFloat(cartTotal.toFixed(2)),
         cartId: cart!.id,
